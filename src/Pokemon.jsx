@@ -31,7 +31,7 @@ const Pokeman = () => {
       const pokemonResponse = await Promise.all(pokemonDetails)
       // console.log(pokemonResponse);
       setPokemon(pokemonResponse)
-      setLoading(false)
+      // setLoading(false)
 
 
     } catch (error) {
@@ -45,6 +45,9 @@ const Pokeman = () => {
 
   useEffect(() => {
     fetchPokemon();
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000);
   }, [])
 
 
@@ -52,7 +55,7 @@ const Pokeman = () => {
     return <div className="loader">
       <div>
         <img src={pokemon_gif} alt={pokemon_gif} />
-        <h1>Loading...</h1>
+        {/* <h1>Loading...</h1>  */}
       </div>
 
     </div>
