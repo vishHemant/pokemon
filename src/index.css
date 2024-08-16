@@ -108,7 +108,7 @@ input[type=text] {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   /* align-items: center; */
   gap: 3.2rem;
@@ -126,7 +126,11 @@ input[type=text] {
   -o-border-radius: .2rem;
   padding: 1.6rem;
   position: relative;
-  max-width: 300px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
 }
 
 .pokemon-card:before {
@@ -161,12 +165,11 @@ input[type=text] {
 
 .pokemon-card:hover {
   transform: scale(1.03);
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-  box-shadow: #110c2e26 0 48px 100px
+  box-shadow: #110c2e26 0 48px 100px;
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
 }
 
 figure {
@@ -227,4 +230,29 @@ pokemon-info {
 .short-container button {
   padding: .6rem 0;
   cursor: pointer
+}
+
+
+/* mobile responsive  */
+
+@media (max-width: 1281px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+@media (max-width: 991px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media (max-width: 767px) {
+  h1{
+    font-size: 4.4rem;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }

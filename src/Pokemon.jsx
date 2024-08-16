@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import pokemon_gif from './assets/pokemon_gif.gif'
 
-const Pokeman = () => {
+const Pokemon = () => {
   const [pokemon, setPokemon] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -126,4 +126,4 @@ const Pokeman = () => {
   )
 }
 
-export default Pokeman
+export default Pokemon
